@@ -58,7 +58,7 @@ const initializeDatabase = async (data) => {
   `;
   await db.run(createTableQuery);
 
-  // Insert data into the table with a single query
+  // Insert data into the table
   const insertDataQuery = `
   INSERT OR IGNORE INTO products (id, title, price, description, category, image, sold, dateOfSale)
   VALUES (?, ?, ?, ?, ?, ?, ?, ?)
